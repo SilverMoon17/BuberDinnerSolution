@@ -1,7 +1,6 @@
 ﻿using BuberDinner.Application.Common.Interfaces.Authentication;
 using BuberDinner.Application.Common.Interfaces.Persistence;
 using BuberDinner.Application.Services.Authentication.Command;
-using BuberDinner.Domain.Entities;
 using ErrorOr;
 using MediatR;
 using BuberDinner.Domain.Common.Errors;
@@ -10,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BuberDinner.Domain.User;
 
 namespace BuberDinner.Application.Authentication.Queries
 {

@@ -17,8 +17,8 @@ namespace BuberDinner.Domain.Dinner
         public string Description { get; }
         public DateTime StartDateTime { get; }
         public DateTime EndDateTime { get; }
-        public DateTime StartedDateTime { get; }
-        public DateTime EndedDateTime { get; }
+        public DateTime? StartedDateTime { get; }
+        public DateTime? EndedDateTime { get; }
         public string Status { get; }
         public bool IsPublic { get; }
         public int MaxGuests { get; }
@@ -33,7 +33,7 @@ namespace BuberDinner.Domain.Dinner
         public DateTime CreatedDateTime { get; }
         public DateTime UpdatedDateTime { get; }
 
-        public Dinner(DinnerId dinnerId,string name, string description, DateTime startDateTime, DateTime endDateTime, DateTime startedDateTime, DateTime endedDateTime, string status, bool isPublic, int maxGuests, Price price, HostId hostId, MenuId menuId, string imageUrl, Location location) : base(dinnerId)
+        public Dinner(DinnerId dinnerId,string name, string description, DateTime startDateTime, DateTime endDateTime, DateTime? startedDateTime, DateTime? endedDateTime, string status, bool isPublic, int maxGuests, Price price, HostId hostId, MenuId menuId, string imageUrl, Location location) : base(dinnerId)
         {
             Name = name;
             Description = description;
@@ -51,7 +51,7 @@ namespace BuberDinner.Domain.Dinner
             Location = location;
         }
 
-        public static Dinner Create(string name, string description, DateTime startDateTime, DateTime endDateTime, DateTime startedDateTime, DateTime endedDateTime, string status, bool isPublic, int maxGuests, Price price, HostId hostId, MenuId menuId, string imageUrl, Location location)
+        public static Dinner Create(string name, string description, string status, bool isPublic, int maxGuests, Price price, HostId hostId, MenuId menuId, string imageUrl, Location location)
         {
             return new(DinnerId.CreateUnique(), name, description, DateTime.UtcNow, DateTime.UtcNow, null, null, status, isPublic, maxGuests, price, hostId, menuId, imageUrl, location);
         }

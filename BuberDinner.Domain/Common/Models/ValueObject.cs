@@ -39,7 +39,7 @@ namespace BuberDinner.Domain.Common.Models
 
         public bool Equals(ValueObject? other)
         {
-            return Equals((object?)other)
+            return Equals((object?)other);
         }
     }
 

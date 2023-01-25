@@ -1,4 +1,5 @@
-﻿using BuberDinner.Domain.Entities;
+﻿
+using BuberDinner.Domain.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;

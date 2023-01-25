@@ -1,5 +1,6 @@
 ﻿using BuberDinner.Domain.Common.Models;
 using BuberDinner.Domain.Menu.ValueObjects;
+using BuberDinner.Domain.User.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;

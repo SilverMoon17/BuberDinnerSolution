@@ -9,7 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using BuberDinner.Application.Common.Interfaces.Services;
 using Microsoft.Extensions.Options;
-using BuberDinner.Domain.Entities;
+using BuberDinner.Domain.User;
 
 namespace BuberDinner.Infrastructure.Authentication
 {
